@@ -1,0 +1,6 @@
+a = int(input())
+b = int(input())
+x, y = divmod(a, b)
+print(x)
+print(y)
+print(divmod(a, b))
