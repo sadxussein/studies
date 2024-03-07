@@ -7,6 +7,7 @@ class Address {
 public:
     Address(std::string city, std::string street, int house, int apartment);
     [[nodiscard]] std::string show() const;
+    bool operator<(const Address &other) const;
 private:
     std::string city;
     std::string street;

@@ -21,7 +21,7 @@ int main() {
         in_file >> house >> apartment;
         addresses.emplace_back(city, street, house, apartment);
     }
-    std::reverse(addresses.begin(), addresses.end());
+    std::sort(addresses.begin(), addresses.end());
     std::ofstream out_file("out.txt");
     out_file << address_count << std::endl;
     for (const auto& address : addresses) {
