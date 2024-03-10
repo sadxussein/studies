@@ -19,6 +19,8 @@ public:
     Polygon();
 
     virtual std::string getInfo();
+
+    int getSidesNumber() const;
 };
 
 class Triangle : public Polygon {

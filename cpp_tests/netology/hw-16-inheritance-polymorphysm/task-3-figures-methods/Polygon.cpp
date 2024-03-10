@@ -11,7 +11,12 @@ Polygon::Polygon(int sides, std::string name) : sides_number(sides), name(std::m
 Polygon::Polygon() : sides_number(0), name("Polygon"), isValid(true) {}
 
 std::string Polygon::getInfo() {
-    return "";
+    return name + (isValid ? ":\nValid\n" : ":\nInvalid\n") + "Sides number: " + std::to_string(getSidesNumber()) +
+           "\n";
+}
+
+int Polygon::getSidesNumber() const {
+    return sides_number;
 }
 
 // Triangles
@@ -24,10 +29,10 @@ Triangle::Triangle(double ab_len, double bc_len, double ca_len, double abc_angle
 }
 
 std::string Triangle::getInfo() {
-    return name + (isValid ? ":\nValid\n" : ":\nInvalid\n") + "Sides: ab=" + std::to_string(ab_len) + " bc=" +
-           std::to_string(bc_len) + " ca=" +
-           std::to_string(ca_len) +
-           "\nAngles: " + "abc=" + std::to_string(abc_angle) + " bca=" + std::to_string(bca_angle) + " cab=" +
+    return name + (isValid ? ":\nValid\n" : ":\nInvalid\n") + "Sides number: " + std::to_string(getSidesNumber()) +
+           "\nSides: ab=" + std::to_string(ab_len) + " bc=" +
+           std::to_string(bc_len) + " ca=" + std::to_string(ca_len) + "\nAngles: " + "abc=" +
+           std::to_string(abc_angle) + " bca=" + std::to_string(bca_angle) + " cab=" +
            std::to_string(cab_angle) + "\n";
 }
 
@@ -69,9 +74,9 @@ Quadrangle::Quadrangle(double ab_len, double bc_len, double cd_len, double da_le
 }
 
 std::string Quadrangle::getInfo() {
-    return name + (isValid ? ":\nValid\n" : ":\nInvalid\n") + "Sides: ab=" + std::to_string(ab_len) + " bc=" +
-           std::to_string(bc_len) + " cd=" +
-           std::to_string(cd_len) + " da=" + std::to_string(da_len) +
+    return name + (isValid ? ":\nValid\n" : ":\nInvalid\n") + "Sides number: " + std::to_string(getSidesNumber()) +
+           "\nSides: ab=" + std::to_string(ab_len) + " bc=" +
+           std::to_string(bc_len) + " cd=" + std::to_string(cd_len) + " da=" + std::to_string(da_len) +
            "\nAngles: " + "abc=" + std::to_string(abc_angle) + " bcd=" + std::to_string(bcd_angle) + " cda=" +
            std::to_string(cda_angle) + " dab=" + std::to_string(dab_angle) + "\n";
 }
