@@ -11,5 +11,6 @@ EquiliteralTriangle::EquiliteralTriangle(double ab_len, double bc_len, double ca
     name = "EquiliteralTriangle";
     if (bca_angle != cab_angle || bca_angle != abc_angle || ab_len != bc_len || ab_len != ca_len) {
         isValid = false;
+        throw PolygonConstructorException("either all sides are not equal or all angles are not equal (equiliteral triangle).");
     }
 }

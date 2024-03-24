@@ -7,6 +7,7 @@
 
 
 #include "Polygon.h"
+#include "PolygonConstructorException.h"
 
 class Quadrangle : public Polygon {
 protected:

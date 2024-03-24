@@ -10,5 +10,6 @@ IsoscelesTriangle::IsoscelesTriangle(double ab_len, double bc_len, double ca_len
     name = "IsoscelesTriangle";
     if (bca_angle != cab_angle || ab_len != bc_len) {
         isValid = false;
+        throw PolygonConstructorException("either sides ab and bc are not equal or angles bca and cab not equal (isosceles triangle).");
     }
 }

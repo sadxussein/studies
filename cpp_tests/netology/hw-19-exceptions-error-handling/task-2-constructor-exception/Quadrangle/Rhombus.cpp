@@ -10,5 +10,6 @@ Rhombus::Rhombus(double ab_len, double bc_len, double cd_len, double da_len, dou
     name = "Rhombus";
     if (ab_len != bc_len || ab_len != cd_len || ab_len != da_len) {
         isValid = false;
+        throw PolygonConstructorException("either sides are not pairwise equal or angles are not pairwise equal (rhombus).");
     }
 }

@@ -9,5 +9,6 @@ RightTriangle::RightTriangle(double ab_len, double bc_len, double ca_len, double
     name = "RightTriangle";
     if (bca_angle != 90) {
         isValid = false;
+        throw PolygonConstructorException("bca angle is not equal 90 degrees (right triangle).");
     }
 }

@@ -7,13 +7,9 @@
 Triangle::Triangle(double ab_len, double bc_len, double ca_len, double abc_angle, double bca_angle, double cab_angle) :
         Polygon(3, "Triangle"), ab_len(ab_len), bc_len(bc_len), ca_len(ca_len), abc_angle(abc_angle),
         bca_angle(bca_angle), cab_angle(cab_angle) {
-    try {
-        if ((abc_angle + bca_angle + cab_angle) != 180) {
-            isValid = false;
-            throw PolygonConstructorException();
-        }
-    } catch (const PolygonConstructorException & e) {
-        std::cerr << e.what() << "angle sum is not equal 180. " << std::endl;
+    if ((abc_angle + bca_angle + cab_angle) != 180) {
+        isValid = false;
+        throw PolygonConstructorException("angle sum is not equal 180 (triangle).");
     }
 }
 

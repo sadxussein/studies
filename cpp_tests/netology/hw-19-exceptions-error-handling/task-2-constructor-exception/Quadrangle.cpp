@@ -10,6 +10,7 @@ Quadrangle::Quadrangle(double ab_len, double bc_len, double cd_len, double da_le
         abc_angle(abc_angle), bcd_angle(bcd_angle), cda_angle(cda_angle), dab_angle(dab_angle) {
     if (abc_angle + bcd_angle + cda_angle + dab_angle != 360) {
         isValid = false;
+        throw PolygonConstructorException("angle sum is not equal 360 degrees (quadrangle).");
     }
 }
 

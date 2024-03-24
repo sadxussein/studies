@@ -7,6 +7,7 @@
 
 
 #include "../Triangle.h"
+#include "../PolygonConstructorException.h"
 
 class EquiliteralTriangle : public Triangle {
 public:

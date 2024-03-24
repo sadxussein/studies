@@ -7,6 +7,7 @@
 
 
 #include "../Quadrangle.h"
+#include "../PolygonConstructorException.h"
 
 class Rectangle : public Quadrangle {
 public:

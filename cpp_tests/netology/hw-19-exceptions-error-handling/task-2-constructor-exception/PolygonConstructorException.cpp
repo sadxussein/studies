@@ -5,5 +5,8 @@
 #include "PolygonConstructorException.h"
 
 const char *PolygonConstructorException::what() const noexcept {
-        return "Polygon creation error. Reason: ";
+    static std::string result;
+    result = "Polygon creation error. Reason: ";
+    result += this->errorMessage;
+    return result.c_str();
 }

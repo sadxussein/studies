@@ -7,6 +7,7 @@
 
 
 #include "../Triangle.h"
+#include "../PolygonConstructorException.h"
 
 class IsoscelesTriangle : public Triangle {
 public:
