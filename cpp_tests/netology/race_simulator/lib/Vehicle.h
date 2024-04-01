@@ -11,7 +11,7 @@
 
 class Vehicle {
 public:
-    Vehicle(std::string n, int s) : name(std::move(n)), speed(s) {};
+    Vehicle(std::string n, int s) : name(std::move(n)), speed(s) {};    // TODO: consider initializing travelTime
     virtual float calculateTravelTime(float distance) = 0;
 protected:
     std::string name;

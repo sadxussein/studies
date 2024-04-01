@@ -6,8 +6,6 @@
 #define LIB_SIMULATION_H
 
 
-#include "VehicleFactory.h" // TODO: consider moving
-
 class Simulation {
 public:
     static Simulation * instance;

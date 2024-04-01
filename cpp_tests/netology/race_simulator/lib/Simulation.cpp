@@ -23,3 +23,4 @@ void Simulation::getResult() {
 }
 
 // TODO: create register of objects to safely destroy them at the end of the program
+// TODO: create destructor for Simulation
