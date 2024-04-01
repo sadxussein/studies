@@ -10,7 +10,7 @@
 
 class LandVehicle : public Vehicle {
 public:
-    LandVehicle(std::string n, int s, int r, float t) : Vehicle(std::move(n), s, t), restTime(r) {}
+    LandVehicle(std::string n, int s, int r) : Vehicle(std::move(n), s), restTime(r) {}
 protected:
     int restTime;
 };
