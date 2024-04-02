@@ -12,7 +12,10 @@
 class Vehicle {
 public:
     Vehicle(std::string n, int s) : name(std::move(n)), speed(s) {};    // TODO: consider initializing travelTime
-    virtual float calculateTravelTime(float distance) = 0;
+    virtual void calculateTravelTime(float distance) = 0;
+    bool operator<(const Vehicle & other) const;
+    std::string getName();
+    std::string getTravelTime();
 protected:
     std::string name;
     int speed;

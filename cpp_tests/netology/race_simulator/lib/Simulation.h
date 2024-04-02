@@ -6,15 +6,22 @@
 #define LIB_SIMULATION_H
 
 
+#include <vector>
+#include <algorithm>
+#include <sstream>
+
+#include "Vehicle.h"
+
 class Simulation {
 public:
     static Simulation * instance;
     static Simulation * getInstance();
-    void init(float dist);
-    void getResult();
+    void simulate(float distance, const std::vector<Vehicle *> & vehicles);
+    std::string printResult();
 private:
     Simulation() = default;
     float distance;
+    std::stringstream result;
 };
 
 

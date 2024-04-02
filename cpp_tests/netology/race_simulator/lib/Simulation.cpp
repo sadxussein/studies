@@ -14,13 +14,20 @@ Simulation * Simulation::getInstance() {
     return instance;
 }
 
-void Simulation::init(float dist) {
-    this->distance = dist;
+void Simulation::simulate(float distance, const std::vector<Vehicle *> & vehicles) {
+    for (auto vehicle : vehicles) {
+        vehicle->calculateTravelTime(distance);
+    }
+    std::sort(vehicles.begin(), vehicles.end(), [](const Vehicle * a, const Vehicle * b) {
+        return a->getTravelTime() < b->getTravelTime();     // TODO: finish comparator
+    });
+    for (auto vehicle : vehicles) {
+        result << vehicle->getName() << ": " << vehicle->getTravelTime() << std::endl;
+    }
 }
 
-void Simulation::getResult() {
-
+std::string Simulation::printResult() {
+    return result.str();
 }
 
-// TODO: create register of objects to safely destroy them at the end of the program
 // TODO: create destructor for Simulation

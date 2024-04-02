@@ -17,6 +17,10 @@ void VehicleManager::addVehicle(Vehicle * vehicle) {
     this->vehicles.push_back(vehicle);
 }
 
+std::vector<Vehicle *> VehicleManager::getVehicles() {
+    return vehicles;
+}
+
 void VehicleManager::cleanup() {
     for (auto v : vehicles) {
         delete v;

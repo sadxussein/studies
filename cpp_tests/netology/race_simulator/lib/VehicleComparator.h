@@ -1,0 +1,8 @@
+#ifndef LIB_VEHICLECOMPARATOR_H
+#define LIB_VEHICLECOMPARATOR_H
+
+
+#include "Vehicle.h"
+
+
+#endif // LIB_VEHICLECOMPARATOR_H
