@@ -8,7 +8,14 @@ Camel::Camel() : LandVehicle("Camel", 10, 30) {}
 
 void Camel::calculateTravelTime(float distance) {
     this->travelTime = distance / this->speed;
-    int restCount = this->travelTime / this->restTime;
+
+    int restCount;
+    if (std::fmod(distance, speed) == 0) {
+        restCount = travelTime / restTime;
+    } else {
+        restCount = travelTime / restTime + 1;
+    }
+
     if (restCount < 2) {
         this->travelTime = this->travelTime + 5 * restCount;
     } else {

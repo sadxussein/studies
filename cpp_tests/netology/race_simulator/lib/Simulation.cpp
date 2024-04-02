@@ -4,6 +4,7 @@
 
 #include "Simulation.h"
 
+// TODO: create destructor for Simulation
 
 Simulation * Simulation::instance = nullptr;
 
@@ -14,13 +15,11 @@ Simulation * Simulation::getInstance() {
     return instance;
 }
 
-void Simulation::simulate(float distance, const std::vector<Vehicle *> & vehicles) {
+void Simulation::simulate(float distance, std::vector<Vehicle *> & vehicles) {
     for (auto vehicle : vehicles) {
         vehicle->calculateTravelTime(distance);
     }
-    std::sort(vehicles.begin(), vehicles.end(), [](const Vehicle * a, const Vehicle * b) {
-        return a->getTravelTime() < b->getTravelTime();     // TODO: finish comparator
-    });
+    std::sort(vehicles.begin(), vehicles.end(), VehicleComparator());
     for (auto vehicle : vehicles) {
         result << vehicle->getName() << ": " << vehicle->getTravelTime() << std::endl;
     }
@@ -30,4 +29,3 @@ std::string Simulation::printResult() {
     return result.str();
 }
 
-// TODO: create destructor for Simulation

@@ -8,17 +8,17 @@
 
 #include <string>
 #include <utility>
+#include <cmath>
 
 class Vehicle {
 public:
-    Vehicle(std::string n, int s) : name(std::move(n)), speed(s) {};    // TODO: consider initializing travelTime
+    Vehicle(std::string n, float s) : name(std::move(n)), speed(s) {};
     virtual void calculateTravelTime(float distance) = 0;
-    bool operator<(const Vehicle & other) const;
-    std::string getName();
-    std::string getTravelTime();
+    [[nodiscard]] std::string getName() const;
+    [[nodiscard]] float getTravelTime() const;
 protected:
     std::string name;
-    int speed;
+    float speed;
     float travelTime;
 };
 

@@ -17,7 +17,7 @@ void VehicleManager::addVehicle(Vehicle * vehicle) {
     this->vehicles.push_back(vehicle);
 }
 
-std::vector<Vehicle *> VehicleManager::getVehicles() {
+std::vector<Vehicle *> & VehicleManager::getVehicles() {
     return vehicles;
 }
 

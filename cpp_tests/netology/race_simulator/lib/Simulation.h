@@ -11,12 +11,13 @@
 #include <sstream>
 
 #include "Vehicle.h"
+#include "VehicleComparator.h"
 
 class Simulation {
 public:
     static Simulation * instance;
     static Simulation * getInstance();
-    void simulate(float distance, const std::vector<Vehicle *> & vehicles);
+    void simulate(float distance, std::vector<Vehicle *> & vehicles);
     std::string printResult();
 private:
     Simulation() = default;
