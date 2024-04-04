@@ -7,7 +7,8 @@
 
 class CamelFactory : public VehicleFactory {
 public:
-    Vehicle * FactoryMethod() override;
+    Vehicle * FactoryMethod
+    () override;
 };
 
 

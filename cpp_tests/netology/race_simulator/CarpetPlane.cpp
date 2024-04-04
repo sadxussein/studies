@@ -1,7 +1,3 @@
-//
-// Created by xussein on 4/2/2024.
-//
-
 #include "CarpetPlane.h"
 
 CarpetPlane::CarpetPlane() : AirVehicle("Carpet plane", 10) {}

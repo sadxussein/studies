@@ -1,7 +1,3 @@
-//
-// Created by xussein on 4/2/2024.
-//
-
 #include "Centaur.h"
 
 Centaur::Centaur() : LandVehicle("Centaur", 15, 8) {}

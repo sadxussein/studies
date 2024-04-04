@@ -1,13 +1,9 @@
-//
-// Created by xussein on 3/30/2024.
-//
-
 #include "Camel.h"
 
 Camel::Camel() : LandVehicle("Camel", 10, 30) {}
 
-void Camel::calculateTravelTime(float distance) {
-    this->travelTime = distance / this->speed;
+float Camel::calculateTravelTime(float distance) {
+    travelTime = distance / speed;
 
     int restCount;
     if (std::fmod(distance, speed) == 0) {
@@ -17,8 +13,10 @@ void Camel::calculateTravelTime(float distance) {
     }
 
     if (restCount < 2) {
-        this->travelTime = this->travelTime + 5 * restCount;
+        travelTime = travelTime + 5 * restCount;
     } else {
-        this->travelTime = this->travelTime + 5 + (restCount - 1) * 8;
+        travelTime = travelTime + 5 + (restCount - 1) * 8;
     }
+
+    return travelTime;
 }

@@ -1,7 +1,3 @@
-//
-// Created by xussein on 4/2/2024.
-//
-
 #include "Broom.h"
 
 Broom::Broom() : AirVehicle("Broom", 20) {}

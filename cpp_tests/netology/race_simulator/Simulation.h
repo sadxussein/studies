@@ -1,5 +1,5 @@
-#ifndef FACTORY_METHOD_TEST_SIMULATION_H
-#define FACTORY_METHOD_TEST_SIMULATION_H
+#ifndef LIB_SIMULATION_H
+#define LIB_SIMULATION_H
 
 
 #include <vector>
@@ -7,6 +7,7 @@
 #include <sstream>
 
 #include "Vehicle.h"
+#include "VehicleComparator.h"
 
 class Simulation {
 public:
@@ -21,4 +22,4 @@ private:
 };
 
 
-#endif //FACTORY_METHOD_TEST_SIMULATION_H
+#endif //LIB_SIMULATION_H

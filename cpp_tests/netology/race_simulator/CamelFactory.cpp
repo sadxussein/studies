@@ -1,5 +1,5 @@
 #include "CamelFactory.h"
 
-Vehicle * CamelFactory::FactoryMethod() {
+Vehicle * CamelFactory::createVehicle() {
     return new Camel();
 }

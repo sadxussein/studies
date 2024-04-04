@@ -16,8 +16,7 @@ add_library(factory_method_lib SHARED
         lib/VehicleFactory.cpp
         lib/land/CamelFactory.cpp
         # race simulation class
-        lib/Simulation.cpp
         # support comparator class for vector
-        lib/VehicleComparator.cpp )
+        )
 
 target_link_libraries(factory_method_test factory_method_lib)

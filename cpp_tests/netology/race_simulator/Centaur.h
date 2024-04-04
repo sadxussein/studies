@@ -1,7 +1,3 @@
-//
-// Created by xussein on 4/2/2024.
-//
-
 #ifndef RACE_SIMULATOR_CENTAUR_H
 #define RACE_SIMULATOR_CENTAUR_H
 

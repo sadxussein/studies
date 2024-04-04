@@ -1,7 +1,3 @@
-//
-// Created by xussein on 4/2/2024.
-//
-
 #include "AllTerrainBoots.h"
 
 AllTerrainBoots::AllTerrainBoots() : LandVehicle("All-terrain boots", 6, 60) {}

@@ -2,5 +2,5 @@
 
 void VehicleFactory::CreateVehicle() {
     Vehicle * vehicle = FactoryMethod();
-    std::cout << vehicle->CalculateTravelTime(1000);
+    std::cout << std::to_string(vehicle->CalculateTravelTime(1000));
 }

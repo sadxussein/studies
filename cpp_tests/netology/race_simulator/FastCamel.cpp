@@ -1,7 +1,3 @@
-//
-// Created by xussein on 4/2/2024.
-//
-
 #include "FastCamel.h"
 
 FastCamel::FastCamel() : LandVehicle("Fast camel", 40, 10) {}

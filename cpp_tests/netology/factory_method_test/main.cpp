@@ -6,7 +6,7 @@ int main() {
     VehicleFactory * camelFactory = new CamelFactory();
     camelFactory->CreateVehicle();
 
-    system("pause");
+//    system("pause");
     
     return 0;
 }

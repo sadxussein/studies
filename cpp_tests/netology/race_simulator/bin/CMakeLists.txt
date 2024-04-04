@@ -1,2 +1,0 @@
-add_executable(race_simulator main.cpp)
-target_link_libraries(race_simulator race_simulator_lib)
