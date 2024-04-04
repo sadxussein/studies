@@ -2,7 +2,7 @@
 #define LIB_LANDVEHICLE_H
 
 
-#include "Vehicle.h"
+#include "../Vehicle.h"
 
 class LandVehicle : public Vehicle {
 public:

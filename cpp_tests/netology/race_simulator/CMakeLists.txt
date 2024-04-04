@@ -10,11 +10,11 @@ add_executable(race_simulator main.cpp)
 
 add_library(race_simulator_lib SHARED
         # race simulation class
-        Simulation.cpp
+        lib/Simulation.cpp
         # land vehicles classes and concrete factory classes
-        LandVehicle.cpp
-        Camel.cpp
-        CamelFactory.cpp
+        lib/land/LandVehicle.cpp
+        lib/land/Camel.cpp
+        lib/land/CamelFactory.cpp
         #        land/FastCamel.cpp
         #        land/Centaur.cpp
         #        land/AllTerrainBoots.cpp
@@ -24,11 +24,11 @@ add_library(race_simulator_lib SHARED
         #        air/Broom.cpp
         #        air/AirVehicle.cpp
         # core classes
-        Vehicle.cpp
-        VehicleManager.cpp
-        VehicleFactory.cpp
+        lib/Vehicle.cpp
+        lib/VehicleManager.cpp
+        lib/VehicleFactory.cpp
         # support comparator class
-        VehicleComparator.cpp
+        lib/VehicleComparator.cpp
         )
 
 target_link_libraries(race_simulator race_simulator_lib)

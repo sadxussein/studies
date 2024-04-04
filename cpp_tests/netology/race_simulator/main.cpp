@@ -2,9 +2,9 @@
 
 // TODO: perhaps move to single header file for inclusion
 // TODO: maybe move headers to separate folder?
-#include "CamelFactory.h"
-#include "VehicleManager.h"
-#include "Simulation.h"
+#include "lib/land/CamelFactory.h"
+#include "lib/VehicleManager.h"
+#include "lib/Simulation.h"
 
 int main() {
 //    std::cout << "Welcome to Race Simulator!" << std::endl

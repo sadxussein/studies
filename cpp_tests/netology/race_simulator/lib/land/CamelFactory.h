@@ -2,7 +2,7 @@
 #define RACE_SIMULATOR_CAMELFACTORY_H
 
 
-#include "VehicleFactory.h"
+#include "../VehicleFactory.h"
 #include "Camel.h"
 
 class CamelFactory : public VehicleFactory {
