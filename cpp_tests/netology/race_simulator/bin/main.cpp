@@ -2,16 +2,16 @@
 
 // TODO: perhaps move to single header file for inclusion
 // TODO: maybe move headers to separate folder?
-#include "../lib/Camel.h"
-#include "../lib/Eagle.h"
+#include "../lib/land/Camel.h"
+#include "../lib/air/Eagle.h"
 #include "../lib/Simulation.h"
 #include "../lib/VehicleFactory.h"
 #include "../lib/VehicleManager.h"
-#include "../lib/FastCamel.h"
-#include "../lib/Centaur.h"
-#include "../lib/AllTerrainBoots.h"
-#include "../lib/Broom.h"
-#include "../lib/CarpetPlane.h"
+#include "../lib/land/FastCamel.h"
+#include "../lib/land/Centaur.h"
+#include "../lib/land/AllTerrainBoots.h"
+#include "../lib/air/Broom.h"
+#include "../lib/air/CarpetPlane.h"
 
 int main() {
     VehicleFactory::registerType<Camel>("Camel");

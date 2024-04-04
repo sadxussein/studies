@@ -1,10 +1,10 @@
 #include <iostream>
 
-#include "Camel.h"
+#include "lib/land/CamelFactory.h"
 
 int main() {
-    Vehicle * camel = new Camel();
-    std::cout << camel->CalculateTravelTime(1000) << std::endl;
+    VehicleFactory * camelFactory = new CamelFactory();
+    camelFactory->CreateVehicle();
 
     system("pause");
     

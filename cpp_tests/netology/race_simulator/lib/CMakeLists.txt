@@ -1,2 +1,2 @@
 set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
-add_library(race_simulator_lib SHARED Simulation.cpp Camel.cpp Eagle.cpp VehicleManager.cpp VehicleFactory.cpp Vehicle.cpp VehicleComparator.cpp FastCamel.cpp FastCamel.h Centaur.cpp Centaur.h AllTerrainBoots.cpp AllTerrainBoots.h CarpetPlane.cpp CarpetPlane.h Broom.cpp Broom.h)
+add_library(race_simulator_lib SHARED Simulation.cpp land/Camel.cpp air/Eagle.cpp VehicleManager.cpp VehicleFactory.cpp Vehicle.cpp VehicleComparator.cpp land/FastCamel.cpp land/FastCamel.h land/Centaur.cpp land/Centaur.h land/AllTerrainBoots.cpp land/AllTerrainBoots.h air/CarpetPlane.cpp air/CarpetPlane.h air/Broom.cpp air/Broom.h)
