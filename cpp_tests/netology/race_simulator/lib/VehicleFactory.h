@@ -9,11 +9,9 @@
 
 class VehicleFactory {
 public:
+    virtual ~VehicleFactory() = default;
     virtual Vehicle * createVehicle() = 0;
-    std::string getVehicleResult();
 };
-
-
 
 
 #endif //LIB_VEHICLEFACTORY_H

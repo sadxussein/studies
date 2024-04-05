@@ -7,7 +7,7 @@
 class Camel : public LandVehicle {
 public:
     Camel();
-    float calculateTravelTime(float distance) override;
+    void calculateTravelTime(float distance) override;
 };
 
 

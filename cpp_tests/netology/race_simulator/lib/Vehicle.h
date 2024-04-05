@@ -8,7 +8,7 @@
 
 class Vehicle {
 public:
-    virtual float calculateTravelTime(float distance) = 0;
+    virtual void calculateTravelTime(float distance) = 0;
     [[nodiscard]] virtual std::string getName() const;
     [[nodiscard]] float getTravelTime() const;
 protected:

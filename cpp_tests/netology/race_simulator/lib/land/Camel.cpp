@@ -2,7 +2,7 @@
 
 Camel::Camel() : LandVehicle("Camel", 10, 30) {}
 
-float Camel::calculateTravelTime(float distance) {
+void Camel::calculateTravelTime(float distance) {
     travelTime = distance / speed;
 
     int restCount;
@@ -17,6 +17,4 @@ float Camel::calculateTravelTime(float distance) {
     } else {
         travelTime = travelTime + 5 + (restCount - 1) * 8;
     }
-
-    return travelTime;
 }

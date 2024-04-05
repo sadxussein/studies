@@ -3,6 +3,14 @@
 // TODO: perhaps move to single header file for inclusion
 // TODO: maybe move headers to separate folder?
 #include "lib/land/CamelFactory.h"
+#include "lib/land/AllTerrainBootsFactory.h"
+#include "lib/land/CentaurFactory.h"
+#include "lib/land/FastCamelFactory.h"
+
+#include "lib/air/BroomFactory.h"
+#include "lib/air/EagleFactory.h"
+#include "lib/air/CarpetPlaneFactory.h"
+
 #include "lib/VehicleManager.h"
 #include "lib/Simulation.h"
 
@@ -21,12 +29,25 @@ int main() {
 //              << "Proceed to vehicle registration? (y/n)" << std::endl;
 
     VehicleFactory * camelFactory = new CamelFactory();
+    VehicleFactory * fastCamelFactory = new FastCamelFactory();
+    VehicleFactory * allTerrainBootsFactory = new AllTerrainBootsFactory();
+    VehicleFactory * centaurFactory = new CentaurFactory();
+    VehicleFactory * broomFactory = new BroomFactory();
+    VehicleFactory * carpetPlaneFactory = new CarpetPlaneFactory();
+    VehicleFactory * eagleFactory = new EagleFactory();
 
     VehicleManager * vehicleManager = VehicleManager::getInstance();
+
     vehicleManager->addVehicle(camelFactory->createVehicle());
-    vehicleManager->addVehicle(camelFactory->createVehicle());
+    vehicleManager->addVehicle(fastCamelFactory->createVehicle());
+    vehicleManager->addVehicle(allTerrainBootsFactory->createVehicle());
+    vehicleManager->addVehicle(centaurFactory->createVehicle());
+    vehicleManager->addVehicle(broomFactory->createVehicle());
+    vehicleManager->addVehicle(carpetPlaneFactory->createVehicle());
+    vehicleManager->addVehicle(eagleFactory->createVehicle());
 
     Simulation * simulation = Simulation::getInstance();
+
     simulation->simulate(10000, vehicleManager->getVehicles());
 
     std::cout << simulation->printResult();
