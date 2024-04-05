@@ -15,7 +15,9 @@ void Simulation::simulate(float distance, std::vector<Vehicle *> & vehicles) {
     for (auto vehicle : vehicles) {
         vehicle->calculateTravelTime(distance);
     }
+
     std::sort(vehicles.begin(), vehicles.end(), VehicleComparator());
+
     for (auto vehicle : vehicles) {
         result << vehicle->getName() << ": " << vehicle->getTravelTime() << std::endl;
     }

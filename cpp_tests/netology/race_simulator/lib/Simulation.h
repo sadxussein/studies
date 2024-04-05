@@ -9,6 +9,12 @@
 #include "Vehicle.h"
 #include "VehicleComparator.h"
 
+enum class RaceType {
+    air,
+    land,
+    all
+};
+
 class Simulation {
 public:
     static Simulation * instance;
@@ -18,6 +24,7 @@ public:
 private:
     Simulation() = default;
     float distance;
+    RaceType raceType;
     std::stringstream result;
 };
 

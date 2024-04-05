@@ -1,3 +1,7 @@
+#define YES 'y'
+#define NO 'n'
+#define QUIT 'q'
+
 #include <iostream>
 
 // TODO: perhaps move to single header file for inclusion
@@ -15,18 +19,26 @@
 #include "lib/Simulation.h"
 
 int main() {
-//    std::cout << "Welcome to Race Simulator!" << std::endl
-//              << "1. Land vehicle only race" << std::endl
-//              << "2. Air vehicle only race" << std::endl
-//              << "3. Combined race" << std::endl
-//              << "Input race type (1-3): " << std::endl;
-//    int raceType;
-//    std::cin >> raceType;   // TODO: check input
-//    std::cout << "Input race distance (should be positive)" << std::endl;   // TODO: check for negative input
-//    float distance;
-//    std::cin >> distance;
-//    std::cout << "There should be at least two vehicles selected for the race simulation to start." << std::endl
-//              << "Proceed to vehicle registration? (y/n)" << std::endl;
+
+    std::cout << "Welcome to Race Simulator!" << std::endl
+                << "1. Land vehicle only race" << std::endl
+                << "2. Air vehicle only race" << std::endl
+                << "3. Combined race" << std::endl
+                << "Input race type (1-3): " << std::endl;
+    int raceType;
+    // do {
+        std::cin >> raceType;   // TODO: check input
+    // } while (RaceType::air < raceType );    
+    std::cout << "Input race distance (should be positive)" << std::endl;   // TODO: check for negative input
+    float distance;
+    std::cin >> distance;
+    std::cout << "There should be at least two vehicles selected for the race simulation to start." << std::endl
+                << "Proceed to vehicle registration? (y/n): " << std::endl;
+    char choice;
+    std::cin >> choice;
+    if (choice == YES) {
+        // std::cout << "" << std::endl << "Select vehicles for the race."      TODO: here
+    }
 
     VehicleFactory * camelFactory = new CamelFactory();
     VehicleFactory * fastCamelFactory = new FastCamelFactory();
