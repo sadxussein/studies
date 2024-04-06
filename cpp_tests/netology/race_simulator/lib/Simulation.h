@@ -10,8 +10,8 @@
 #include "VehicleComparator.h"
 
 enum class RaceType {
-    air,
     land,
+    air,
     all
 };
 
@@ -21,6 +21,9 @@ public:
     static Simulation * getInstance();
     void simulate(float distance, std::vector<Vehicle *> & vehicles);
     std::string printResult();
+    void setRaceType(int raceType);
+    std::string getRaceTypeName() const;
+    RaceType getRaceType() const;
 private:
     Simulation() = default;
     float distance;

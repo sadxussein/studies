@@ -17,9 +17,11 @@ public:
     void addVehicle(Vehicle * vehicle);
     std::vector<Vehicle *> & getVehicles();
     void cleanup();
+    int getVehicleCount();
 private:
     std::vector<Vehicle *> vehicles;
-    VehicleManager() = default;
+    VehicleManager();
+    int vehicleCount;
 };
 
 
