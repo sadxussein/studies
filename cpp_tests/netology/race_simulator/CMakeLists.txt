@@ -15,26 +15,19 @@ add_library(race_simulator_lib SHARED
         lib/Vehicle.cpp
         lib/VehicleFactory.cpp
         lib/VehicleManager.cpp
-        # land vehicles classes and concrete factory classes
+        # land vehicles classes
         lib/land/LandVehicle.cpp
         lib/land/Camel.cpp
-        lib/land/CamelFactory.cpp
         lib/land/FastCamel.cpp
-        lib/land/FastCamelFactory.cpp
         lib/land/Centaur.cpp
-        lib/land/CentaurFactory.cpp
         lib/land/AllTerrainBoots.cpp
-        lib/land/AllTerrainBootsFactory.cpp
-        # air vehicles classes and concrete factory classes
+        # air vehicles classes
         lib/air/AirVehicle.cpp
         lib/air/Eagle.cpp
-        lib/air/EagleFactory.cpp
         lib/air/CarpetPlane.cpp
-        lib/air/CarpetPlaneFactory.cpp
         lib/air/Broom.cpp
-        lib/air/BroomFactory.cpp
         # support comparator class
         lib/VehicleComparator.cpp
-        )
+        lib/VehicleRegisteredException.cpp lib/VehicleRegisteredException.h)
 
 target_link_libraries(race_simulator race_simulator_lib)

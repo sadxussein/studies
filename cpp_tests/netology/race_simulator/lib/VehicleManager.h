@@ -7,8 +7,10 @@
 
 
 #include <vector>
+#include <set>
 
 #include "Vehicle.h"
+#include "VehicleRegisteredException.h"
 
 class VehicleManager {
 public:
@@ -17,9 +19,10 @@ public:
     void addVehicle(Vehicle * vehicle);
     std::vector<Vehicle *> & getVehicles();
     void cleanup();
-    int getVehicleCount();
+    [[nodiscard]] int getVehicleCount() const;
 private:
     std::vector<Vehicle *> vehicles;
+    std::set<std::string> vehiclesNames;
     VehicleManager();
     int vehicleCount;
 };

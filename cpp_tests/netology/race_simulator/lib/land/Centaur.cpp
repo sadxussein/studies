@@ -12,5 +12,5 @@ void Centaur::calculateTravelTime(float distance) {
         restCount = travelTime / restTime + 1;
     }
 
-    this->travelTime = this->travelTime + 5 * restCount;
+    travelTime = travelTime + 2 * restCount;
 }

@@ -1,7 +1,5 @@
 #include "Simulation.h"
 
-// TODO: create destructor for Simulation
-
 Simulation * Simulation::instance = nullptr;
 
 Simulation * Simulation::getInstance() {
@@ -37,6 +35,7 @@ void Simulation::simulate(float distance, std::vector<Vehicle *> & vehicles) {
 
     std::sort(vehicles.begin(), vehicles.end(), VehicleComparator());
 
+    result.str("");
     for (auto vehicle : vehicles) {
         result << vehicle->getName() << ": " << vehicle->getTravelTime() << std::endl;
     }
