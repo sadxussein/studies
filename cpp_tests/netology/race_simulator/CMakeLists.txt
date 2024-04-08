@@ -26,8 +26,9 @@ add_library(race_simulator_lib SHARED
         lib/air/Eagle.cpp
         lib/air/CarpetPlane.cpp
         lib/air/Broom.cpp
-        # support comparator class
+        # support classes
         lib/VehicleComparator.cpp
-        lib/VehicleRegisteredException.cpp lib/VehicleRegisteredException.h)
+        lib/VehicleRegisteredException.cpp
+        )
 
 target_link_libraries(race_simulator race_simulator_lib)

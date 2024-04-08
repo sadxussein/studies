@@ -1,11 +1,7 @@
 #include "Simulation.h"
 
-Simulation * Simulation::instance = nullptr;
-
-Simulation * Simulation::getInstance() {
-    if (!instance) {
-        instance = new Simulation();
-    }
+Simulation & Simulation::getInstance() {
+    static Simulation instance;
     return instance;
 }
 
@@ -36,8 +32,11 @@ void Simulation::simulate(float distance, std::vector<Vehicle *> & vehicles) {
     std::sort(vehicles.begin(), vehicles.end(), VehicleComparator());
 
     result.str("");
+    result << "Simulation completed. Race distance was " << distance << ". Finishing (top to bottom): " << std::endl;
+    int count = 1;
     for (auto vehicle : vehicles) {
-        result << vehicle->getName() << ": " << vehicle->getTravelTime() << std::endl;
+        result << count << ". " << vehicle->getName() << " completed race in " << vehicle->getTravelTime() << '.' << std::endl;
+        count ++;
     }
 }
 

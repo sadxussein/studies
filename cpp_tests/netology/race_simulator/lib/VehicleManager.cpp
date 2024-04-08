@@ -6,12 +6,8 @@
 
 VehicleManager::VehicleManager() : vehicleCount(0) {}
 
-VehicleManager * VehicleManager::instance = nullptr;
-
-VehicleManager * VehicleManager::getInstance() {
-    if (!instance) {
-        instance = new VehicleManager();
-    }
+VehicleManager & VehicleManager::getInstance() {
+    static VehicleManager instance;
     return instance;
 }
 

@@ -84,11 +84,11 @@ int main() {
             if (raceType < '1' || raceType > '3') {
                 std::cerr << "[ERROR] Unrecognized input. Please, select valid race (1-3)." << std::endl;
             } else {
-                Simulation::getInstance()->setRaceType((raceType - '0') - 1);
+                Simulation::getInstance().setRaceType((raceType - '0') - 1);
             }
         } while (raceType < '1' || raceType > '3');
 
-        registerClasses(Simulation::getInstance()->getRaceType());
+        registerClasses(Simulation::getInstance().getRaceType());
 
         std::cout << "Input race distance (should be positive): ";
         std::string distanceInput;
@@ -106,7 +106,7 @@ int main() {
         } while (distance <= 0);
 
         std::cout << "There should be at least two vehicles selected for the race simulation to start." << std::endl
-                  << "Selected race type is " << Simulation::getInstance()->getRaceTypeName() << "." << std::endl;
+                  << "Selected race type is " << Simulation::getInstance().getRaceTypeName() << "." << std::endl;
         int vehicleCounter = 1;
         for (auto & it : VehicleFactory::getInstance().getVehicleClassesNames()) {
             std::cout << vehicleCounter << ". " << it << std::endl;
@@ -123,7 +123,12 @@ int main() {
                 std::cin >> input;
                 if (input != '0') {
                     try {
-                        VehicleManager::getInstance()->addVehicle(VehicleFactory::getInstance().createVehicle((input - '0') - 1));
+                        VehicleManager::getInstance().addVehicle(VehicleFactory::getInstance().createVehicle((input - '0') - 1));
+                        std::cout << "Currently registered vehicles: ";
+                        for (auto & vehicle : VehicleManager::getInstance().getVehicles()) {
+                            std::cout << vehicle->getName() << ' ';
+                        }
+                        std::cout << std::endl;
                     } catch (VehicleRegisteredException & e) {
                         std::cerr << e.what();
                     }
@@ -133,12 +138,11 @@ int main() {
             } while (input < '0' || input > static_cast<char>('0' + VehicleFactory::getInstance().getVehicleClassesCount()));
         }
 
-        Simulation::getInstance()->simulate(distance, VehicleManager::getInstance()->getVehicles());
+        Simulation::getInstance().simulate(distance, VehicleManager::getInstance().getVehicles());
 
-        std::cout << "Race result: " << std::endl;
-        std::cout << Simulation::getInstance()->printResult();
+        std::cout << Simulation::getInstance().printResult();
 
-        VehicleManager::getInstance()->cleanup();
+        VehicleManager::getInstance().cleanup();
         VehicleFactory::getInstance().cleanup();
 
         do {

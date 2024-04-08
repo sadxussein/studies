@@ -7,9 +7,9 @@ void FastCamel::calculateTravelTime(float distance) {
 
     int restCount;
     if (std::fmod(distance, speed) == 0) {
-        restCount = travelTime / restTime;
+        restCount = travelTime / restTime - 1;
     } else {
-        restCount = travelTime / restTime + 1;
+        restCount = travelTime / restTime;
     }
 
     if (restCount == 1) {

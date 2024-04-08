@@ -14,8 +14,7 @@
 
 class VehicleManager {
 public:
-    static VehicleManager * instance;
-    static VehicleManager * getInstance();
+    static VehicleManager & getInstance();
     void addVehicle(Vehicle * vehicle);
     std::vector<Vehicle *> & getVehicles();
     void cleanup();

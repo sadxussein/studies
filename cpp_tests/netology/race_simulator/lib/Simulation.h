@@ -17,8 +17,7 @@ enum class RaceType {
 
 class Simulation {
 public:
-    static Simulation * instance;
-    static Simulation * getInstance();
+    static Simulation & getInstance();
     void simulate(float distance, std::vector<Vehicle *> & vehicles);
     std::string printResult();
     void setRaceType(int raceType);
