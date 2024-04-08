@@ -126,9 +126,9 @@ int main() {
                         VehicleManager::getInstance().addVehicle(VehicleFactory::getInstance().createVehicle((input - '0') - 1));
                         std::cout << "Currently registered vehicles: ";
                         for (auto & vehicle : VehicleManager::getInstance().getVehicles()) {
-                            std::cout << vehicle->getName() << ' ';
+                            std::cout << vehicle->getName() << ", ";
                         }
-                        std::cout << std::endl;
+                        std::cout << "register another or finish registration (0)? ";
                     } catch (VehicleRegisteredException & e) {
                         std::cerr << e.what();
                     }

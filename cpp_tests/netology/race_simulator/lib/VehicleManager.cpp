@@ -26,10 +26,6 @@ std::vector<Vehicle *> & VehicleManager::getVehicles() {
     return vehicles;
 }
 
-int VehicleManager::getVehicleCount() const {
-    return vehicleCount;
-}
-
 void VehicleManager::cleanup() {
     for (auto it : vehicles) {
         delete it;

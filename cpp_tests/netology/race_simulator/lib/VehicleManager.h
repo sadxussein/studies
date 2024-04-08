@@ -18,7 +18,6 @@ public:
     void addVehicle(Vehicle * vehicle);
     std::vector<Vehicle *> & getVehicles();
     void cleanup();
-    [[nodiscard]] int getVehicleCount() const;
 private:
     std::vector<Vehicle *> vehicles;
     std::set<std::string> vehiclesNames;
