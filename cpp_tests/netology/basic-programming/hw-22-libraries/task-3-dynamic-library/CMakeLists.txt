@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.25)
+set(CMAKE_CXX_COMPILER g++)
+set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
+project(Task-1-static-library)
+add_library(LeaverLibrary SHARED Leaver.cpp)
+add_executable(LeaverExecutable main.cpp)
+target_link_libraries(LeaverExecutable LeaverLibrary)

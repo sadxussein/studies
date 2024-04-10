@@ -1,0 +1,41 @@
+10
+London
+Oxford Street
+45
+6
+Manchester
+Piccadilly
+12
+33
+Liverpool
+Mathew Street
+8
+21
+Birmingham
+Broad Street
+75
+10
+Glasgow
+Sauchiehall Street
+30
+42
+Bristol
+Park Street
+5
+18
+Leeds
+Briggate
+17
+3
+Sheffield
+Division Street
+28
+7
+Edinburgh
+Princes Street
+10
+15
+Newcastle
+Grey Street
+22
+9
