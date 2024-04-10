@@ -1,7 +1,0 @@
-cmake_minimum_required(VERSION 3.25)
-set(CMAKE_CXX_COMPILER g++)
-set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
-project(Task-5-dynamic-polygon-library)
-add_library(PolygonLibrary SHARED Triangle.cpp PolygonConstructorException.cpp Polygon.cpp Quadrangle.cpp Triangle/RightTriangle.cpp Triangle/IsoscelesTriangle.cpp Triangle/EquiliteralTriangle.cpp Quadrangle/Parallelogram.cpp Quadrangle/Rectangle.cpp Quadrangle/Rhombus.cpp Quadrangle/Square.cpp)
-add_executable(Polygon main.cpp)
-target_link_libraries(Polygon PolygonLibrary)
